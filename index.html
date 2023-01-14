@@ -12,43 +12,61 @@
       integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
       crossorigin="anonymous"
     />
+
     <link rel="stylesheet" href="src/style.css" />
+
+    <script
+      src="https://kit.fontawesome.com/ad70d7dbae.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <div class="container">
-      <div class="weather-app">
-        <div class="row">
-          <div class="col-12">
-            <h1 id="greet-city">City, State</h1>
+      <div class="weather-app-wrapper">
+        <div class="weather-app">
+          <div class="row">
+            <div class="col-12">
+              <h1 id="greet-city">City, State</h1>
+            </div>
           </div>
+          <div id="current-date-time">
+            3:34 PM 
+          </br>
+          Saturday, January 14, 2023
+          </div>
+          
+          <div class="row" id="current-weather">
+            <div class="col-4">77° F | C°</div>
+            <div class="col-4">
+              <i class="fa-sharp fa-solid fa-sun" id="sunny-icon"></i>
+            </div>
+            <div class="col-4">
+              <ul>
+                <li>
+                  <i class="fa-sharp fa-solid fa-droplet"></i>
+                  Precipitation: 0%
+                </li>
+                <li>
+                  <i class="fa-light fa-temperature-three-quarters"></i>
+                  Humidity: 0%
+                </li>
+                <li>
+                  <i class="fa-solid fa-wind"></i>
+                  Wind: 0 mph
+                </li>
+              </ul>
+            </div>
+          </div>
+          <p>Sunny</p>
         </div>
 
-        <ul>
-          <li>3:34 PM</li>
-          <li>Saturday, January 14, 2023</li>
-        </ul>
-
-        <div class="row">
-          <div class="col-4">77° F | C°</div>
-          <div class="col-4">
-            <img src="images/sunny.png" alt="sunny" />
-          </div>
-          <div class="col-4">
-            <ul>
-              <li>Precipitation: 0%</li>
-              <li>Humidity: 0%</li>
-              <li>Wind: 0 mph</li>
-            </ul>
-          </div>
-        </div>
-        <p>Sunny</p>
         <small>
           <a
             href="https://github.com/JuanitaRomero/vanilla-weather-app"
             target="_blank"
             >Open-source code</a
           >
-          by Juanita Romero
+          by Juanita Romero 👩‍💻
         </small>
       </div>
     </div>

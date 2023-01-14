@@ -1,12 +1,16 @@
 li {
   list-style: none;
 }
+ul {
+  text-align: left;
+}
 
-.weather-app {
+.weather-app-wrapper {
   max-width: 1000px;
   margin: 30px auto;
+}
+.weather-app {
   padding: 20px;
-  border: 3px solid burlywood;
   border-radius: 10px;
 
   font-family: "Libre Franklin", sans-serif;
@@ -16,4 +20,14 @@ li {
 #greet-city {
   font-size: 45px;
   font-weight: 600;
+}
+
+#sunny-icon {
+  font-size: 100px;
+  opacity: 0.7;
+  transition: all 0.15s ease-in-ou;
+}
+#current-weather {
+  margin-top: 35px;
+  margin-bottom: 30px;
 }
