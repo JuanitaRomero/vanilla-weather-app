@@ -16,19 +16,24 @@
   </head>
   <body>
     <div class="container">
-      <div class="class-weather-app">
-        <h1>City, State</h1>
+      <div class="weather-app">
+        <div class="row">
+          <div class="col-12">
+            <h1 id="greet-city">City, State</h1>
+          </div>
+        </div>
+
         <ul>
-          <li>Wednesday 3:34 PM</li>
-          <li>Sunny</li>
+          <li>3:34 PM</li>
+          <li>Saturday, January 14, 2023</li>
         </ul>
 
         <div class="row">
-          <div class="col-6">
+          <div class="col-4">77° F | C°</div>
+          <div class="col-4">
             <img src="images/sunny.png" alt="sunny" />
-            77° F | C°
           </div>
-          <div class="col-6">
+          <div class="col-4">
             <ul>
               <li>Precipitation: 0%</li>
               <li>Humidity: 0%</li>
@@ -36,15 +41,16 @@
             </ul>
           </div>
         </div>
+        <p>Sunny</p>
+        <small>
+          <a
+            href="https://github.com/JuanitaRomero/vanilla-weather-app"
+            target="_blank"
+            >Open-source code</a
+          >
+          by Juanita Romero
+        </small>
       </div>
-      <small>
-        <a
-          href="https://github.com/JuanitaRomero/vanilla-weather-app"
-          target="_blank"
-          >Open-source code</a
-        >
-        by Juanita Romero
-      </small>
     </div>
 
     <script src="src/app.js"></script>
