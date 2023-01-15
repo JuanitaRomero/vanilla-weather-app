@@ -19,6 +19,7 @@
       src="https://kit.fontawesome.com/ad70d7dbae.js"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -26,17 +27,23 @@
         <div class="weather-app">
           <div class="row">
             <div class="col-12">
-              <h1 id="greet-city">City, State</h1>
+              <h1 id="current_city"></h1>
             </div>
           </div>
           <div id="current-date-time">
-            3:34 PM 
-          </br>
-          Saturday, January 14, 2023
+            3:34 PM
+            <br />
+            Saturday, January 14, 2023
           </div>
-          
+
           <div class="row" id="current-weather">
-            <div class="col-4">77° F | C°</div>
+            <div class="col-4">
+              <strong id="current_temp"></strong>
+              <span class="units">
+                <a href="">°F </a> |
+                <a href="">°C</a>
+              </span>
+            </div>
             <div class="col-4">
               <i class="fa-sharp fa-solid fa-sun" id="sunny-icon"></i>
             </div>
@@ -44,20 +51,23 @@
               <ul>
                 <li>
                   <i class="fa-sharp fa-solid fa-droplet"></i>
-                  Precipitation: 0%
+                  Feels Like:
+                  <span id="feels_like"></span>%
                 </li>
                 <li>
                   <i class="fa-light fa-temperature-three-quarters"></i>
-                  Humidity: 0%
+                  Humidity:
+                  <span id="humidity"></span>%
                 </li>
                 <li>
                   <i class="fa-solid fa-wind"></i>
-                  Wind: 0 mph
+                  Wind:
+                  <span id="wind_speed"></span>mph
                 </li>
               </ul>
             </div>
           </div>
-          <p>Sunny</p>
+          <p id="current_description"></p>
         </div>
 
         <small>
