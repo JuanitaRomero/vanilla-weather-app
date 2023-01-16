@@ -27,7 +27,10 @@
         <div class="weather-app">
           <form id="search-form">
             <div class="row">
-              <div class="col-8">
+              <div class="col-3">
+                <p id="logo">Weather</p>
+              </div>
+              <div class="col-6">
                 <input
                   type="search"
                   placeholder="Type a city name..."
@@ -36,7 +39,7 @@
                   autocomplete="off"
                 />
               </div>
-              <div class="col-4">
+              <div class="col-3">
                 <input type="submit" value="Search" class="btn btn-primary" />
               </div>
             </div>
@@ -60,7 +63,7 @@
               <img src="" alt="" id="icon" />
             </div>
             <div class="col-4">
-              <ul>
+              <ul id="temp-details">
                 <li>
                   <i class="fa-sharp fa-solid fa-droplet"></i>
                   Feels like:

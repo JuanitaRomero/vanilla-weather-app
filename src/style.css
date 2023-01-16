@@ -13,7 +13,7 @@ ul {
 .weather-app {
   padding: 20px;
   border-radius: 10px;
-  border: 2px solid bisque;
+  border: 2px solid #e6dedd;
   font-family: "Libre Franklin", sans-serif;
   text-align: center;
 }
@@ -44,4 +44,26 @@ ul {
 #current_description {
   font-size: 20px;
   text-transform: uppercase;
+}
+
+#current_city {
+  font-size: 50px;
+  padding-top: 45px;
+}
+#temp-details {
+  letter-spacing: 1px;
+  line-height: 30px;
+}
+
+#city-input {
+  border: 1px solid rgb(17, 17, 17, 0.1);
+  border-radius: 30px;
+  background: #e6dedd;
+  opacity: 0.5;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+#logo {
+  font-family: "Sacramento", cursive;
+  font-size: 30px;
 }
