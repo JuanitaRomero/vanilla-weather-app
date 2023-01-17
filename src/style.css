@@ -6,6 +6,10 @@ ul {
   text-align: left;
 }
 
+a {
+  text-decoration: none;
+}
+
 .weather-app-wrapper {
   max-width: 900px;
   margin: 30px auto;
@@ -25,6 +29,15 @@ ul {
   position: relative;
   font-size: 14px;
   top: -45px;
+}
+
+.weather-app .active {
+  color: rgb(33, 33, 33);
+  cursor: default;
+}
+
+.weather-app .active:hover {
+  text-decoration: none;
 }
 
 #greet-city {

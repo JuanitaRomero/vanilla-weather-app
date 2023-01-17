@@ -32,7 +32,9 @@ function displayTemperature(response) {
   let dateElement = document.querySelector("#date_time");
   let iconElement = document.querySelector("#icon");
 
-  temperatureElements.innerHTML = Math.round(response.data.temperature.current);
+  celsiusTemperature = response.data.temperature.current;
+
+  temperatureElements.innerHTML = Math.round(celsiusTemperature);
   cityElement.innerHTML = response.data.city;
   descriptionTemp.innerHTML = response.data.condition.description;
   humidityElement.innerHTML = response.data.temperature.humidity;
@@ -46,8 +48,8 @@ function displayTemperature(response) {
 }
 function search(city) {
   let apiKey = "4a71f359eca9d0eft630db05oc4deac4";
-  let metrics = "imperial";
-  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${metrics}`;
+  let units = "metric";
+  let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=${units}`;
 
   axios.get(apiUrl).then(displayTemperature);
 }
@@ -57,6 +59,34 @@ function handleSumbit(event) {
   let cityInputElement = document.querySelector("#city-input");
   search(cityInputElement.value);
 }
+function displayFahrenheitTemp(event) {
+  event.preventDefault();
+
+  let temperatureElements = document.querySelector("#current_temp");
+
+  celsiusLink.classList.remove("active");
+  fahrenheitLink.classList.add("active");
+  let fahrenheitTemp = (celsiusTemperature * 9) / 5 + 32;
+
+  temperatureElements.innerHTML = Math.round(fahrenheitTemp);
+}
+
+function displayCelsiusTemp(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector("#current_temp");
+
+  celsiusLink.classList.add("active");
+  fahrenheitLink.classList.remove("active");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", handleSumbit);
+
+let fahrenheitLink = document.querySelector("#fahrenheit-link");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemp);
+
+let celsiusLink = document.querySelector("#celsius-link");
+celsiusLink.addEventListener("click", displayCelsiusTemp);
