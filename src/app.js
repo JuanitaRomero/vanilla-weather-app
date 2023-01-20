@@ -40,6 +40,33 @@ function formatDate(timestamp) {
   return `${day} ${month} ${currentDate}, ${hours}:${minutes}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thurs", "Fri", "Sat"];
+  let forecastHTML = `<div class="row">`;
+
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `  
+      <div class="col-2">
+            <div class="weather-forecast-date">${day}</div>
+
+              <img src="images/sunny.png" alt="sunny" />
+          <div class="weather-forecast-temp">
+                <span class="temp-max">18°</span>
+                <span class="temp-min">12°</span>
+          </div>
+        </div>
+          
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 function displayTemperature(response) {
   let temperatureElements = document.querySelector("#current_temp");
   let cityElement = document.querySelector("#current_city");
@@ -110,3 +137,5 @@ let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", displayCelsiusTemp);
 
 search("houston");
+
+displayForecast();
