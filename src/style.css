@@ -16,18 +16,18 @@ small {
 }
 body {
   font-family: "Kalam", cursive;
+  background: linear-gradient(
+    110.6deg,
+    rgb(184, 142, 252) 2.2%,
+    rgb(104, 119, 244) 100.2%
+  );
 }
 
 .weather-app-wrapper {
   max-width: 900px;
   margin: 30px auto;
   border: solid 2px #fae3d9;
-  background: linear-gradient(
-    110.6deg,
-    rgb(184, 142, 252) 2.2%,
-    rgb(104, 119, 244) 100.2%
-  );
-
+  background-color: #e6dedd;
   border-radius: 15px;
   padding-bottom: 25px;
   padding-top: 15px;
@@ -46,18 +46,9 @@ body {
   top: -45px;
 }
 
-.weather-app .active {
-  color: rgb(33, 33, 33);
-  cursor: default;
-}
-
-.weather-app .active:hover {
-  text-decoration: none;
-}
 .weather-forecast {
   margin-top: 20px;
   text-align: center;
-  color: black;
 }
 
 .temp-min {
@@ -81,9 +72,8 @@ body {
 }
 
 #city-input {
-  border: 1px solid rgb(17, 17, 17, 0.1);
+  border: 1px solid black;
   border-radius: 30px;
-  background: #e6dedd;
   opacity: 0.5;
   text-align: center;
   transition: all 200ms ease-in-out;
