@@ -9,22 +9,31 @@ ul {
 a {
   text-decoration: none;
 }
+
+small {
+  text-align: center;
+  padding-top: 20px;
+}
 body {
-  color: #fae3d9;
+  font-family: "Kalam", cursive;
+}
+
+.weather-app-wrapper {
+  max-width: 900px;
+  margin: 30px auto;
+  border: solid 2px #fae3d9;
   background: linear-gradient(
     110.6deg,
     rgb(184, 142, 252) 2.2%,
     rgb(104, 119, 244) 100.2%
   );
-}
 
-.weather-app-wrapper {
-  max-width: 1000px;
-  margin: 30px auto;
+  border-radius: 15px;
+  padding-bottom: 25px;
+  padding-top: 15px;
 }
 .weather-app {
   padding: 20px;
-  font-family: "Libre Franklin", sans-serif;
   text-align: center;
 }
 .weather-app strong {
@@ -57,7 +66,6 @@ body {
 
 #current-weather {
   margin-top: 35px;
-  margin-bottom: 30px;
 }
 #current_description {
   font-size: 20px;
@@ -66,7 +74,6 @@ body {
 
 #current_city {
   font-size: 60px;
-  font-family: "Alice", serif;
 }
 #temp-details {
   letter-spacing: 1px;
@@ -82,10 +89,13 @@ body {
   transition: all 200ms ease-in-out;
 }
 #logo {
-  font-family: "Sacramento", cursive;
-  font-size: 30px;
-  font-weight: 500px;
+  font-size: 40px;
 }
 #updated_info {
   font-size: 15px;
+}
+
+#icon {
+  position: relative;
+  top: -30px;
 }

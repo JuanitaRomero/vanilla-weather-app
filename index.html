@@ -20,6 +20,12 @@
       crossorigin="anonymous"
     ></script>
     <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&display=swap" rel="stylesheet">
+
   </head>
   <body>
     <div class="container">
@@ -59,12 +65,11 @@
             <div class="col-4">
               <strong id="current_temp"></strong>
               <span class="units">
-                <a href="" id="celsius-link" class="active">°C </a> |
-                <a href="" id="fahrenheit-link">°F</a>
+                °F
               </span>
             </div>
             <div class="col-4">
-              <img src="" alt="" id="icon" width="160px" />
+              <img src="" alt="" id="icon" width="180px" />
             </div>
             <div class="col-4">
               <ul id="temp-details">
@@ -74,7 +79,7 @@
                   <span id="feels_like"></span>%
                 </li>
                 <li>
-                  <i class="fa-light fa-temperature-three-quarters"></i>
+                 <i class="fa-regular fa-heat"></i>
                   Humidity:
                   <span id="humidity"></span>%
                 </li>
@@ -89,17 +94,25 @@
           <p id="current_description"></p>
         </div>
 
-        <div class="weather-forecast" id="forecast">
-      </div>
-      <small>
+       <hr>
+
+        <div class="weather-forecast" id="forecast"></div>
+       
+       
+     
+    </div>
+
+
+      <footer>
+      <small class="d-block">
         <a
           href="https://github.com/JuanitaRomero/vanilla-weather-app"
           target="_blank"
-          >Open-source code</a
-        >
-        by Juanita Romero 👩‍💻
+          id="open"
+          >Open-source code</a>
+        , by Juanita Romero 👩‍💻
       </small>
-    </div>
+    </footer>
 
     <script src="src/app.js"></script>
 
